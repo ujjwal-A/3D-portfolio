@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { fadeIn } from "../utils/motion";
 
 const Hero = () => {
   return (
@@ -14,7 +15,7 @@ const Hero = () => {
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient"></div>
         </div>
-        <div>
+        <motion.div variants={fadeIn("", "", 0.1, 1)}>
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915eff]">Ujjwal</span>
           </h1>
@@ -22,7 +23,7 @@ const Hero = () => {
             I develop 3D visuals,user <br className="sm:block hidden" />{" "}
             interfaces and web applications
           </p>
-        </div>
+        </motion.div>
       </div>
       <ComputersCanvas />
 

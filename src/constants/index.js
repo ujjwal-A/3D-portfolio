@@ -119,18 +119,18 @@ const technologies = [
 
 const experiences = [
   {
-    title: "FullStack Developer",
+    title: "Frontend Developer",
     company_name: "BizAcuity Solutions",
     icon: bizacuity,
     iconBg: "#ffffff",
     date: "July 2022 - Present",
     points: [
-      "Implemented React for CSV-based bulk user creation in GAMWIT, driving a 10% growth in the B2B sector with error reporting.",
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Designed and deployed a dynamic API-based prediction system with user-specific forecasts and a user-friendly SDK for seamless integration.",
-      "Developed customizable alert rules in GAMWIT for specific KPIs, triggering email notifications on breaches. Users can also modify status, assign, and log changes in the alerts log table."
+      "Led the frontend team in successfully migrating the codebase to React and TypeScript, resulting in a 25% increase in application performance and a 20% boost in development efficiency.",
+      "Used React to create a Bulk User creation feature from CSV files, resulting in a 10% business growth.",
+      "Engineered a real-time prediction system with SDK and API support to calculate churn, LTV, detect bonus abusers, and provide game recommendations based on user activity.",
+      "Built a comprehensive alert management system that sends email notifications when alerts are triggered.",
+      "Built the UI of an AI model to identify money laundering in a casino, enhancing gaming analytics security.",
+      "Crafted a gaming data analysis UI to visualize essential KPI trends and deliver valuable insights."
     ],
   },
   {
@@ -140,8 +140,9 @@ const experiences = [
     iconBg: "#ffffff",
     date: "May 2022 - July 2022",
     points: [
-      "Onboarded clients by creating new schemas and tables. Developed a Python program to read Kafka feed and populate MySQL tables using date hooks. Implemented SQL queries to convert and integrate client data into our platform.",
-      "Developed a new UI for exploratory data analysis, providing users with a comprehensive overview of their data. Enabled visualization of graphs and trends for various KPIs, enhancing data understanding and insights."
+      "Facilitated client onboarding by creating schemas, developing a Python program to read Kafka feeds, and integrating client data into our platform using SQL queries.",
+      "Developed user-friendly dashboards for measuring 'Drift Analysis trends between predictions and actual results,enhancing predictive accuracy by 15%.",
+      "Conducted thorough code reviews and debugging to ensure high-quality software deliverables, reducing application errors by 7% and enhancing user experience."
     ],
   },
 

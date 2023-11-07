@@ -46,9 +46,13 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl
         leading-[30px]"
       >
-        Experienced full-stack developer specialized in front-end development.
-        Led front-end development for multiple models on GAMWIT, delivering
-        client-specific solutions in AI-powered analytics.
+        With 1.5+ years of software development experience, I am a key
+        contributor at BizAcuity Solutions in the GAMWIT project—an AI-powered
+        SaaS platform for visual and predictive analytics. I've made innovative
+        web applications, streamlined operations, designed software
+        specifications, and implemented AI-based solutions, driving a 20% boost
+        in customer satisfaction, reflecting my dedication to high-quality,
+        customer-centric software solutions.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

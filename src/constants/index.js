@@ -125,10 +125,10 @@ const experiences = [
     iconBg: "#ffffff",
     date: "July 2022 - Present",
     points: [
-      "Led the frontend team in successfully migrating the codebase to React and TypeScript, resulting in a 25% increase in application performance and a 20% boost in development efficiency.",
+      "Led frontend team in successfully migrating codebase to React and TypeScript, yielding a 20% increase in development efficiency.",
       "Used React to create a Bulk User creation feature from CSV files, resulting in a 10% business growth.",
-      "Engineered a real-time prediction system with SDK and API support to calculate churn, LTV, detect bonus abusers, and provide game recommendations based on user activity.",
       "Built a comprehensive alert management system that sends email notifications when alerts are triggered.",
+      "Engineered a real-time prediction system with SDK and API support to calculate churn, LTV, detect bonus abusers, and provide game recommendations based on user activity.",
       "Built the UI of an AI model to identify money laundering in a casino, enhancing gaming analytics security.",
       "Crafted a gaming data analysis UI to visualize essential KPI trends and deliver valuable insights."
     ],

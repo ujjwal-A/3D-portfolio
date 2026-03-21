@@ -32,8 +32,13 @@ const Navbar = () => {
             className="w-9 h-9 object-contain
           font-bold cursor-pointer"
           />
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Ujjwal &nbsp;<span className="sm:block hidden">| SDE-1</span>
+          <p className="text-white text-[18px] font-bold cursor-pointer inline-flex items-center">
+            <span>Ujjwal</span>
+            <span className="sm:block hidden ml-2">| SDE-2</span>
+            <span className="ml-2 inline-flex items-center gap-1 rounded-full border border-emerald-400/40 bg-emerald-500/10 px-2 py-[2px] text-[11px] font-medium text-emerald-300">
+              <span className="h-2 w-2 rounded-full bg-emerald-400" />
+              Open to work
+            </span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">

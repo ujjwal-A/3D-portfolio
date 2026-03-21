@@ -29,6 +29,7 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 import bizacuity from "./company/bizacuity.png";
+import vyapar from "./vyapar.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -71,5 +72,6 @@ export {
   myfitness_gym,
   chat_web_app,
 
-  bizacuity
+  bizacuity,
+  vyapar
 };

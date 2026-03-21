@@ -29,7 +29,8 @@ import {
   myfitness_gym,
   chat_web_app,
 
-  bizacuity
+  bizacuity,
+  vyapar
 } from "../assets";
 
 export const navLinks = [
@@ -118,6 +119,21 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Software Engineer 2",
+    company_name: "Simply Vyapar Apps",
+    icon: vyapar,
+    iconBg: "#ffffff",
+    date: "July 2024 - Present",
+    points: [
+      "Reduced database queries by 70% and improved page load by 3x (2.1s → 0.7s) by architecting a sync-aware hybrid cache invalidation system with selective refresh logic.",
+      "Eliminated 100% of partial commits and reduced transaction-related defects by 85% by designing a distributed transaction framework enforcing atomic commits between local and server databases.",
+      "Reduced PDF-related support tickets by 75% and eliminated non-recoverable production failures by building a resilient PDF generation pipeline with multi-engine fallback.",
+      "Eliminated full table scans on large datasets by building a two-phase Master Search — an FTS3 index resolves matches across 9+ fields in O(log n) time, passed to a targeted paginated query with date, type, and role filters.",
+      "Prevented UI crashes on large datasets by engineering a bidirectional infinite scroll model keeping only 70 rows in memory at any time, with reactive datasource resets ensuring data stays fresh on every filter, sort, or search change.",
+      "Standardized UI architecture across 10+ business modules by architecting a reusable composite page-layout framework (React + TypeScript), cutting per-page development effort by 25%.",
+    ],
+  },
   {
     title: "Frontend Developer",
     company_name: "BizAcuity Solutions",

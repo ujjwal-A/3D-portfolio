@@ -42,17 +42,17 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
       <motion.p
+        variants={fadeIn("", "", 0.05, 1)}
+        className="mt-4 text-white font-semibold text-[20px] max-w-3xl"
+      >
+        I build things that scale, perform, and don't break.
+      </motion.p>
+      <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl
         leading-[30px]"
-      >
-        With 1.5+ years of software development experience, I am a key
-        contributor at BizAcuity Solutions in the GAMWIT project—an AI-powered
-        SaaS platform for visual and predictive analytics. I've made innovative
-        web applications, streamlined operations, designed software
-        specifications, and implemented AI-based solutions, driving a 20% boost
-        in customer satisfaction, reflecting my dedication to high-quality,
-        customer-centric software solutions.
+      >Full-stack engineer with 4 years of experience, specializing in frontend architecture and distributed systems. I've shipped features used by hundreds of thousands of users — cache systems that cut DB load by 70%, transaction frameworks that eliminated partial commits, and search engines that replaced full table scans entirely. I don't just build UIs, I think deeply about the systems behind them.
+        <br /> <br /> Currently open to senior roles where the bar is high. Let's talk 🙂
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

@@ -51,9 +51,48 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl
         leading-[30px]"
-      >Full-stack engineer with 4 years of experience, specializing in frontend architecture and distributed systems. I've shipped features used by hundreds of thousands of users — cache systems that cut DB load by 70%, transaction frameworks that eliminated partial commits, and search engines that replaced full table scans entirely. I don't just build UIs, I think deeply about the systems behind them.
-        <br /> <br /> Currently open to senior roles where the bar is high. Let's talk 🙂
+      >
+        Software engineer with 4 years of experience, specializing in frontend
+        architecture (React + TypeScript) and performance-oriented systems work.
+        I’ve shipped production features at scale — cache systems that cut DB load
+        by 70%, transaction frameworks that eliminated partial commits, and
+        search that replaced full table scans.
+        <br /> <br />
+        Open to frontend / full-stack roles with strong ownership and high
+        technical bar.
       </motion.p>
+
+      <div className="mt-8 flex flex-col gap-4 max-w-3xl">
+        <motion.div
+          variants={fadeIn("up", "spring", 0.3, 0.75)}
+          className="inline-flex items-center gap-3 rounded-2xl border border-yellow-400/30 bg-yellow-400/10 px-5 py-4"
+        >
+          <span className="text-2xl">🏆</span>
+          <div>
+            <p className="text-yellow-300 font-semibold text-[15px]">
+              Won Simply Vyapar Tech Hackathon 2025
+            </p>
+            <p className="text-secondary text-[13px] mt-0.5">
+              Generative AI track — competed against internal engineering teams, building an AI-powered solution judged on technical depth and business impact.
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn("up", "spring", 0.4, 0.75)}
+          className="inline-flex items-center gap-3 rounded-2xl border border-blue-400/20 bg-blue-400/5 px-5 py-4"
+        >
+          <span className="text-2xl">🎓</span>
+          <div>
+            <p className="text-white font-semibold text-[15px]">
+              Ramaiah Institute of Technology
+            </p>
+            <p className="text-secondary text-[13px] mt-0.5">
+              Bachelor of Engineering &nbsp;·&nbsp; Aug 2018 – Jul 2022 &nbsp;·&nbsp; 8.6 / 10
+            </p>
+          </div>
+        </motion.div>
+      </div>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

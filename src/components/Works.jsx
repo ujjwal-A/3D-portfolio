@@ -14,7 +14,11 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_link,
 }) => {
+  const hasSource = typeof source_code_link === "string" && source_code_link.trim().length > 0;
+  const hasLive = typeof live_link === "string" && live_link.trim().length > 0;
+
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -23,7 +27,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-[490px]"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -32,21 +36,31 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div
-            className="absolute inset-0 flex justify-end m-3 
-          card-img_hover"
-          >
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex
-                justify-center items-center cursor-pointed"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
+          <div className="absolute inset-0 flex justify-end gap-2 m-3 card-img_hover">
+            {hasSource && (
+              <button
+                type="button"
+                onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                aria-label={`Open ${name} source code`}
+                title="Source code"
+              >
+                <img src={github} alt="" className="w-1/2 h-1/2 object-contain" />
+              </button>
+            )}
+            {hasLive && (
+              <button
+                type="button"
+                onClick={() => window.open(live_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                aria-label={`Open ${name} live demo`}
+                title="Live demo"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
 
@@ -56,7 +70,7 @@ const ProjectCard = ({
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
+          {tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               {`#${tag.name}`}
             </p>
@@ -80,11 +94,10 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
-          real-world eamples of my work. Each project is briefly described with
-          links to code repositories and live demos in it.It reflects my ability
-          to solve complex problems, work different technologies, and manage
-          project effectively.
+          A few projects that showcase my frontend engineering skills—from UI
+          polish and component architecture to performance and state management.
+          I’m happy to share more details (trade-offs, implementation choices,
+          and results) on request.
         </motion.p>
       </div>
 

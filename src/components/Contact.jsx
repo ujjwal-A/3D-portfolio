@@ -7,6 +7,15 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+const EMAILJS_SERVICE_ID =
+  import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_nibua5m";
+const EMAILJS_TEMPLATE_ID =
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_9kgap4i";
+const EMAILJS_PUBLIC_KEY =
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "KNa4Ij7I70NMGhsyJ";
+const CONTACT_TO_EMAIL =
+  import.meta.env.VITE_CONTACT_TO_EMAIL || "ujjwalagrawal3012@gmail.com";
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -16,6 +25,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null); // 'success' | 'error' | null
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,39 +36,30 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    //X4_BbaDePiJ6GyHKO
-    //template_rbaxo4i
-    //service_6w1zl4c
-
     emailjs
       .send(
-        "service_6w1zl4c",
-        "template_rbaxo4i",
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Ujjwal",
           from_email: form.email,
-          to_email: "ujjwalujjwalagrawal@gmail.com",
+          to_email: CONTACT_TO_EMAIL,
           message: form.message,
         },
-        "X4_BbaDePiJ6GyHKO"
+        EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
+          setStatus("success");
+          setForm({ name: "", email: "", message: "" });
+          setTimeout(() => setStatus(null), 5000);
         },
-        (error) => {
+        () => {
           setLoading(false);
-          console.log(error);
-
-          alert("Something went wrong.");
+          setStatus("error");
+          setTimeout(() => setStatus(null), 5000);
         }
       );
   };
@@ -119,12 +120,23 @@ const Contact = () => {
             />
           </label>
           <button
-            className=" bg-tertiary py-3 px-8 outline-none w-fit text-white 
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white
             font-bold shadow-md shadow-primary rounded-xl"
             type="submit"
           >
             {loading ? "Sending..." : "Send"}
           </button>
+
+          {status === "success" && (
+            <p className="text-green-400 text-[14px] font-medium">
+              Thank you! I'll get back to you as soon as possible.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-red-400 text-[14px] font-medium">
+              Something went wrong. Please try again or email me directly.
+            </p>
+          )}
         </form>
       </motion.div>
 

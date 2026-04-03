@@ -22,7 +22,6 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
   python,
   spring,
   sql,
@@ -40,7 +39,11 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experience",
+  },
+  {
+    id: "stats",
+    title: "Impact",
   },
   {
     id: "contact",
@@ -50,19 +53,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "React Developer",
+    title: "Frontend Engineer (React + TS)",
     icon: mobile,
   },
   {
-    title: "Web Developer",
+    title: "Frontend Architecture",
     icon: web,
   },
   {
-    title: "Backend Developer",
+    title: "Systems & Performance",
     icon: backend,
   },
   {
-    title: "Data Warehousing",
+    title: "Electron / Desktop Apps",
     icon: creator,
   },
 ];
@@ -97,25 +100,25 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Git",
+    icon: git,
   },
   {
-    name: "git",
-    icon: git,
+    name: "Figma",
+    icon: figma,
   },
   {
     name: "Python",
     icon: python,
   },
   {
-    name: "Spring",
+    name: "Spring Boot",
     icon: spring,
   },
   {
     name: "SQL",
     icon: sql,
-  }
+  },
 ];
 
 const experiences = [
@@ -129,38 +132,31 @@ const experiences = [
       "Reduced database queries by 70% and improved page load by 3x (2.1s → 0.7s) by architecting a sync-aware hybrid cache invalidation system with selective refresh logic.",
       "Eliminated 100% of partial commits and reduced transaction-related defects by 85% by designing a distributed transaction framework enforcing atomic commits between local and server databases.",
       "Reduced PDF-related support tickets by 75% and eliminated non-recoverable production failures by building a resilient PDF generation pipeline with multi-engine fallback.",
+      "Reduced invoice HTML payload size by 66% and improved preview stability by 50% by redesigning the Electron invoice/PDF generation framework, replacing DOM-bound rendering with IPC-based file-backed previews.",
       "Eliminated full table scans on large datasets by building a two-phase Master Search — an FTS3 index resolves matches across 9+ fields in O(log n) time, passed to a targeted paginated query with date, type, and role filters.",
       "Prevented UI crashes on large datasets by engineering a bidirectional infinite scroll model keeping only 70 rows in memory at any time, with reactive datasource resets ensuring data stays fresh on every filter, sort, or search change.",
       "Standardized UI architecture across 10+ business modules by architecting a reusable composite page-layout framework (React + TypeScript), cutting per-page development effort by 25%.",
+      "Improved dashboard responsiveness by 40% and reduced unnecessary re-renders by 30% by architecting a real-time dashboard framework with centralized state management, enabling dynamic widget selection and multi-range sales analytics.",
+      "Improved user activation by 30% and reduced onboarding drop-off by 15% by building a Firebase Remote Config-driven A/B experimentation system splitting first-time users between demo scheduling and a guided first-sale walkthrough (OTP auth + skippable gate).",
+      "Built role-based item visibility controls for salesman management — admins can restrict salesmen to specific item categories, with smart defaulting logic ensuring newly added categories automatically inherit correct access without manual reassignment, backed by DB schema changes and a redesigned admin UI.",
     ],
   },
   {
-    title: "Frontend Developer",
+    title: "Software Engineer 1",
     company_name: "BizAcuity Solutions",
     icon: bizacuity,
     iconBg: "#ffffff",
-    date: "July 2022 - Present",
+    date: "July 2022 - July 2024",
     points: [
       "Led frontend team in successfully migrating codebase to React and TypeScript, yielding a 20% increase in development efficiency.",
       "Used React to create a Bulk User creation feature from CSV files, resulting in a 10% business growth.",
-      "Built a comprehensive alert management system that sends email notifications when alerts are triggered.",
-      "Engineered a real-time prediction system with SDK and API support to calculate churn, LTV, detect bonus abusers, and provide game recommendations based on user activity.",
-      "Built the UI of an AI model to identify money laundering in a casino, enhancing gaming analytics security.",
-      "Crafted a gaming data analysis UI to visualize essential KPI trends and deliver valuable insights."
+      "Increased user conversion by 30% by redesigning signup and login flows with friction-reducing UX improvements, optimized validation, and secure authentication patterns.",
+      "Reduced incident response time by 30% by building an event-driven alerting system with automated email notifications and centralized alert tracking.",
+      "Reduced page load time by 30% by translating UI/UX designs into optimized frontend implementations and applying performance optimization strategies.",
+      "Streamlined client onboarding by designing database schemas, building a Python-based Kafka consumer to process event streams, and integrating client data using optimized SQL workflows.",
     ],
   },
-  {
-    title: "Software Developer Trainee",
-    company_name: "BizAcuity Solutions",
-    icon: bizacuity,
-    iconBg: "#ffffff",
-    date: "May 2022 - July 2022",
-    points: [
-      "Facilitated client onboarding by creating schemas, developing a Python program to read Kafka feeds, and integrating client data into our platform using SQL queries.",
-      "Developed user-friendly dashboards for measuring 'Drift Analysis trends between predictions and actual results,enhancing predictive accuracy by 15%.",
-      "Conducted thorough code reviews and debugging to ensure high-quality software deliverables, reducing application errors by 7% and enhancing user experience."
-    ],
-  },
+  // Note: Keeping experience aligned with the latest resume content.
 
   // {
   //   title: "React.js Developer",
@@ -216,53 +212,29 @@ const experiences = [
   // },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
 
 const projects = [
   {
     name: "Chat Web App",
-    description:"Developed a dynamic 3D portfolio website using React and React3 for 3D rendering, and leveraged Framer Motion for captivating animations, showcasing a creative and interactive approach to web design.",
+    description:
+      "Real-time chat app with a clean UI, responsive layouts, and production-style state management. Focused on reliability, UX polish, and predictable client-side data flow.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mui",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "ui",
         color: "pink-text-gradient",
       },
     ],
     image: chat_web_app,
-    source_code_link: "https://github.com/",
+    source_code_link: "",
+    live_link: "",
   },
   {
     name: "MyFitness Gym",
@@ -282,8 +254,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image:   myfitness_gym,
-    source_code_link: "https://github.com/",
+    image: myfitness_gym,
+    source_code_link: "",
+    live_link: "",
   },
   {
     name: "Trip Guide",
@@ -304,8 +277,9 @@ const projects = [
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "",
+    live_link: "",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

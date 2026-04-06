@@ -27,6 +27,7 @@ import {
   sql,
   myfitness_gym,
   chat_web_app,
+  electron,
 
   bizacuity,
   vyapar
@@ -90,6 +91,10 @@ const technologies = [
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "Electron",
+    icon: electron,
   },
   {
     name: "Redux Toolkit",

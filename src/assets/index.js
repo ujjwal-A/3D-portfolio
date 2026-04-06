@@ -36,6 +36,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import myfitness_gym from './myfitness_gym.jpeg'
 import chat_web_app from "./chat_web_app.jpeg";
+import electron from "./electron.png";
 
 export {
   logo,
@@ -71,7 +72,7 @@ export {
   sql,
   myfitness_gym,
   chat_web_app,
-
+  electron,
   bizacuity,
   vyapar
 };

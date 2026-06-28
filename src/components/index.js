@@ -1,4 +1,3 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -8,6 +7,9 @@ import Works from './Works';
 import Stats from './Stats';
 import Contact from './Contact';
 
+// Canvas components are intentionally NOT re-exported here. They pull in
+// three.js / @react-three, so they're loaded via dynamic import() at their
+// call sites (React.lazy) to keep them out of the main bundle.
 export {
   Hero,
   Navbar,
@@ -17,8 +19,4 @@ export {
   Works,
   Stats,
   Contact,
-  EarthCanvas,
-  BallCanvas,
-  ComputersCanvas,
-  StarsCanvas
-}
+};

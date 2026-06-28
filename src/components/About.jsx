@@ -52,13 +52,14 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl
         leading-[30px]"
       >
-        Software engineer with 4 years of experience, specializing in frontend
-        architecture (React + TypeScript) and performance-oriented systems work.
-        I’ve shipped production features at scale — cache systems that cut DB load
-        by 70%, transaction frameworks that eliminated partial commits, and
-        search that replaced full table scans.
+        Software engineer with 4 years of experience across the stack — from
+        frontend architecture (React + TypeScript) to the performance-oriented
+        backend systems behind it. I’ve shipped production features at scale —
+        cache systems that cut DB load by 70%, distributed transaction frameworks
+        that eliminated partial commits, and a migration from MongoDB to sharded
+        PostgreSQL built for horizontal scale.
         <br /> <br />
-        Open to frontend / full-stack roles with strong ownership and high
+        Open to full-stack and frontend roles with strong ownership and a high
         technical bar.
       </motion.p>
 

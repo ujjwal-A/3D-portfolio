@@ -1,7 +1,10 @@
-import { BallCanvas } from "./canvas";
+import { lazy, Suspense } from "react";
+
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { useInView } from "../hooks/useInView";
+
+const BallCanvas = lazy(() => import("./canvas/Ball"));
 
 // Each BallCanvas spins up its own WebGL context, and browsers cap how many can
 // be live at once (~16). Mounting every ball at once blew past that limit and
@@ -13,7 +16,11 @@ const TechBall = ({ technology }) => {
 
   return (
     <div className="w-28 h-28" ref={ref}>
-      {inView && <BallCanvas icon={technology.icon} />}
+      {inView && (
+        <Suspense fallback={null}>
+          <BallCanvas icon={technology.icon} />
+        </Suspense>
+      )}
     </div>
   );
 };

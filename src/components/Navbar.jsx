@@ -9,6 +9,36 @@ const Navbar = () => {
   const [Active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+  // Scroll-spy: highlight the nav item for whichever section is centered in the
+  // viewport, so the active link tracks scroll position (not just clicks).
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => {
+        const anchor = document.getElementById(link.id);
+        const section = anchor?.closest("section") || anchor;
+        return section ? { title: link.title, section } : null;
+      })
+      .filter(Boolean);
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const centered = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (centered[0]) {
+          const match = sections.find((s) => s.section === centered[0].target);
+          if (match) setActive(match.title);
+        }
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    );
+
+    sections.forEach((s) => observer.observe(s.section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20

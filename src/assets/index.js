@@ -36,7 +36,10 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import myfitness_gym from './myfitness_gym.jpeg'
 import chat_web_app from "./chat_web_app.jpeg";
-import electron from "./electron.png";
+import electron from "./electron.webp";
+import firebase from "./firebase.png";
+import materialUi from "./materialUi.png";
+import taxone from "./Vyapar_taxone.svg";
 
 export {
   logo,
@@ -74,5 +77,8 @@ export {
   chat_web_app,
   electron,
   bizacuity,
-  vyapar
+  vyapar,
+  firebase,
+  materialUi,
+  taxone
 };

@@ -28,9 +28,12 @@ import {
   myfitness_gym,
   chat_web_app,
   electron,
+  firebase,
+  materialUi,
 
   bizacuity,
-  vyapar
+  vyapar,
+  taxone
 } from "../assets";
 
 export const navLinks = [
@@ -73,14 +76,6 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -93,8 +88,20 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
     name: "Electron",
     icon: electron,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
   },
   {
     name: "Redux Toolkit",
@@ -103,10 +110,6 @@ const technologies = [
   {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "Git",
-    icon: git,
   },
   {
     name: "Figma",
@@ -121,12 +124,35 @@ const technologies = [
     icon: spring,
   },
   {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
     name: "SQL",
     icon: sql,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "Material UI",
+    icon: materialUi,
   },
 ];
 
 const experiences = [
+  {
+    title: "Software Engineer 2",
+    company_name: "Vyapar TaxOne (Formerly Suvit)",
+    icon: taxone,
+    iconBg: "#ffffff",
+    date: "April 2026 - Present",
+    points: [
+      "Built a Tally connection framework that auto-detects free ports and rebinds per-user Tally instances, fixing a contention bug where only the first Tally instance bound and listened while every other instance's ODBC connection silently failed — unblocking concurrent multi-user access.",
+      "Led the migration of the primary data store from MongoDB to a sharded PostgreSQL + Citus architecture designed for horizontal scale, with shard-key strategy, distribution tuning, indexing, and failover.",
+    ],
+  },
   {
     title: "Software Engineer 2",
     company_name: "Simply Vyapar Apps",

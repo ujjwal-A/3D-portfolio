@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import { useInView } from "../../hooks/useInView";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
@@ -46,23 +47,29 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  const [ref, inView] = useInView("100px");
+
   return (
-    <Canvas
-      frameloop="demand"
-      shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
+    <div ref={ref} className="w-full h-full">
+      {inView && (
+        <Canvas
+          frameloop="demand"
+          shadows
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Computers isMobile={isMobile} />
+          </Suspense>
+          <Preload all />
+        </Canvas>
+      )}
+    </div>
   );
 };
 
